@@ -4,6 +4,9 @@ language: swift
 xcode_workspace: Goalie/Goalie.xcworkspace
 xcode_scheme: Travis
 xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone 11
-podfile: Goalie/
 before_install:
-  - gem install cocoapods --pre
+    - gem install cocoapods --pre
+install:
+    - cd Goalie
+    - pod install --repo-update
+    - cd ..
