@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>219163178912-qfvel44s746dq4soiq8a6rt1jrig82jb.apps.googleusercontent.com</string>
+	<string>516165802936-0j6o6kmlhf8nqdkl9teh49hp94qe7kg0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.219163178912-qfvel44s746dq4soiq8a6rt1jrig82jb</string>
+	<string>com.googleusercontent.apps.516165802936-0j6o6kmlhf8nqdkl9teh49hp94qe7kg0</string>
 	<key>API_KEY</key>
 	<string>$firebaseKey</string>
 	<key>GCM_SENDER_ID</key>
-	<string>219163178912</string>
+	<string>516165802936</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.gmail.adams.s.r.jack.Goalie</string>
 	<key>PROJECT_ID</key>
-	<string>goalie-91e5b</string>
+	<string>goalie-b7951</string>
 	<key>STORAGE_BUCKET</key>
-	<string>goalie-91e5b.appspot.com</string>
+	<string>goalie-b7951.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:219163178912:ios:67d64ce101f9f974cc16c5</string>
+	<string>1:516165802936:ios:54ea8bba294f2960164d4d</string>
 	<key>DATABASE_URL</key>
-	<string>https://goalie-91e5b.firebaseio.com</string>
+	<string>https://goalie-b7951.firebaseio.com</string>
 </dict>
 </plist>
