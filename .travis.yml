@@ -12,5 +12,5 @@ install:
     - cd Goalie
     - pod install --repo-update
     - cd Goalie
-    - mov dummy.plist GoogleService-Info.plist
+    - mv dummy.plist GoogleService-Info.plist
     - cd ../..
