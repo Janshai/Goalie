@@ -46,8 +46,14 @@ extension ViewController: FUIAuthDelegate {
             
         } else {
             if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as? UITabBarController {
-                self.view.window?.rootViewController = vc
-                self.view.window?.makeKeyAndVisible()
+                guard let window = self.view.window else {
+                    return
+                }
+                window.rootViewController = vc
+                let options: UIView.AnimationOptions = .transitionCrossDissolve
+                let duration: TimeInterval = 0.3
+                
+                UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
             }
         }
     }
