@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseUI
 
 class ViewController: UIViewController {
     
@@ -25,18 +24,9 @@ class ViewController: UIViewController {
     }
     
     func setupAuthVC() {
-        let authUI = FUIAuth.defaultAuthUI()
-        authUI?.delegate = self
-        let providers: [FUIAuthProvider] = [
-          FUIEmailAuth()
-        ]
-        
-        authUI?.providers = providers
-        
-        let vc = authUI?.authViewController()
-        if let vc = vc {
-            self.authVC = vc
-        }
+        var authViewModel = AuthManager.defaultAuthViewModel
+        authViewModel.delegate = self
+        self.authVC = authViewModel.authVC
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -46,15 +36,10 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: FUIAuthDelegate {
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        if let e = error {
-            print(e.localizedDescription)
-            let alert = UIAlertController(title: "Error", message: "Oops, there was an error while signing you in. Please try again.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
-        } else {
+extension ViewController: AuthViewModelDelegate {
+    func didSignInWith(result: Result<String, Error>) {
+        switch result {
+        case .success(_):
             if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as? UITabBarController {
                 guard let window = self.view.window else {
                     return
@@ -65,7 +50,12 @@ extension ViewController: FUIAuthDelegate {
                 
                 UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
             }
+        case .failure(let e):
+            print(e.localizedDescription)
+            let alert = UIAlertController(title: "Error", message: "Oops, there was an error while signing you in. Please try again.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
-
+         
