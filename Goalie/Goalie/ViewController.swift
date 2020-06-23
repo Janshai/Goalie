@@ -7,14 +7,49 @@
 //
 
 import UIKit
+import FirebaseUI
 
 class ViewController: UIViewController {
-
+    
+    var authVC: UIViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let providers: [FUIAuthProvider] = [
+          FUIEmailAuth()
+        ]
+        
+        authUI?.providers = providers
+        
+        let vc = authUI?.authViewController()
+        if let vc = vc {
+            self.authVC = vc
+        }
+        
+    
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        self.present(self.authVC, animated: true, completion: nil)
     }
 
 
+}
+
+extension ViewController: FUIAuthDelegate {
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if let e = error {
+            
+            print(e.localizedDescription)
+            
+        } else {
+            if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as? UITabBarController {
+                self.view.window?.rootViewController = vc
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
+    }
 }
 

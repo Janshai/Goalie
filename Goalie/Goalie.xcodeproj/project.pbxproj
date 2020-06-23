@@ -18,6 +18,7 @@
 		0462267324A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
 		0462267424A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
 		0462267524A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
+		0462267724A235C100448389 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0462267624A235C100448389 /* Home.storyboard */; };
 		348B0F755ABF3E7F78C6D22E /* Pods_Goalie_GoalieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67779B85A97F14BD2076E3C /* Pods_Goalie_GoalieUITests.framework */; };
 		B5C719E115D6A60E00C859F1 /* Pods_Goalie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DC6EC3115BEE07FE1F7F5A /* Pods_Goalie.framework */; };
 		CFF4767EF3115A2B216926F8 /* Pods_GoalieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BB405668E5713CE4627D8 /* Pods_GoalieTests.framework */; };
@@ -56,6 +57,7 @@
 		0462266024A0140D00448389 /* GoalieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieUITests.swift; sourceTree = "<group>"; };
 		0462266224A0140D00448389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0462267224A0177900448389 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0462267624A235C100448389 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		08F4356ECC9FDEE9331B43E5 /* Pods-Goalie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goalie.debug.xcconfig"; path = "Target Support Files/Pods-Goalie/Pods-Goalie.debug.xcconfig"; sourceTree = "<group>"; };
 		0E246DDBEA3654FBC4C10D0C /* Pods-Goalie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goalie.release.xcconfig"; path = "Target Support Files/Pods-Goalie/Pods-Goalie.release.xcconfig"; sourceTree = "<group>"; };
 		1C1005166AE7C668CE8E6E64 /* Pods-GoalieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalieTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalieTests/Pods-GoalieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				0462264724A0140C00448389 /* Assets.xcassets */,
 				0462264924A0140C00448389 /* LaunchScreen.storyboard */,
 				0462264C24A0140C00448389 /* Info.plist */,
+				0462267624A235C100448389 /* Home.storyboard */,
 			);
 			path = Goalie;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				0462263824A0140B00448389 /* Frameworks */,
 				0462263924A0140B00448389 /* Resources */,
 				EF9AC75F92A02B707778450C /* [CP] Embed Pods Frameworks */,
+				72C9B25C1D8A0939C1131827 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +227,7 @@
 				0462265924A0140D00448389 /* Frameworks */,
 				0462265A24A0140D00448389 /* Resources */,
 				6E766D30AC8564ED80716A56 /* [CP] Embed Pods Frameworks */,
+				419AA26804340EAF864536E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0462264B24A0140C00448389 /* LaunchScreen.storyboard in Resources */,
+				0462267724A235C100448389 /* Home.storyboard in Resources */,
 				0462267324A0177900448389 /* GoogleService-Info.plist in Resources */,
 				0462264824A0140C00448389 /* Assets.xcassets in Resources */,
 				0462264624A0140B00448389 /* Main.storyboard in Resources */,
@@ -308,6 +314,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		419AA26804340EAF864536E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Goalie-GoalieUITests/Pods-Goalie-GoalieUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Goalie-GoalieUITests/Pods-Goalie-GoalieUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Goalie-GoalieUITests/Pods-Goalie-GoalieUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E766D30AC8564ED80716A56 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +346,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Goalie-GoalieUITests/Pods-Goalie-GoalieUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72C9B25C1D8A0939C1131827 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Goalie/Pods-Goalie-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Goalie/Pods-Goalie-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Goalie/Pods-Goalie-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E5D8EAE2A3E82051BD722FA /* [CP] Check Pods Manifest.lock */ = {
