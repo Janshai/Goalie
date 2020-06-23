@@ -49,8 +49,10 @@ class ViewController: UIViewController {
 extension ViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         if let e = error {
-            
             print(e.localizedDescription)
+            let alert = UIAlertController(title: "Error", message: "Oops, there was an error while signing you in. Please try again.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
         } else {
             if let vc = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as? UITabBarController {
