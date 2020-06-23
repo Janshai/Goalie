@@ -128,6 +128,7 @@
 		0462263D24A0140B00448389 /* Goalie */ = {
 			isa = PBXGroup;
 			children = (
+				04B5190924A2463700158107 /* Auth */,
 				0462267224A0177900448389 /* GoogleService-Info.plist */,
 				0462263E24A0140B00448389 /* AppDelegate.swift */,
 				0462264024A0140B00448389 /* SceneDelegate.swift */,
@@ -137,9 +138,6 @@
 				0462264924A0140C00448389 /* LaunchScreen.storyboard */,
 				0462264C24A0140C00448389 /* Info.plist */,
 				0462267624A235C100448389 /* Home.storyboard */,
-				04B5190324A23FE500158107 /* AuthViewModel.swift */,
-				04B5190524A2410B00158107 /* AuthManager.swift */,
-				04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */,
 			);
 			path = Goalie;
 			sourceTree = "<group>";
@@ -160,6 +158,16 @@
 				0462266224A0140D00448389 /* Info.plist */,
 			);
 			path = GoalieUITests;
+			sourceTree = "<group>";
+		};
+		04B5190924A2463700158107 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				04B5190324A23FE500158107 /* AuthViewModel.swift */,
+				04B5190524A2410B00158107 /* AuthManager.swift */,
+				04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		0E5B6502FEE2160AD29C55BF /* Frameworks */ = {
