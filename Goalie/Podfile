@@ -6,6 +6,12 @@ target 'Goalie' do
   use_frameworks!
 
   pod 'Firebase/Analytics'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Email'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Facebook'
+  pod 'FirebaseUI/Phone'
+  pod 'FirebaseUI/OAuth'
 
   # Pods for Goalie
 
