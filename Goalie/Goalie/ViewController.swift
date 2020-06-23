@@ -13,8 +13,18 @@ class ViewController: UIViewController {
     
     var authVC: UIViewController!
     
+    @IBAction func tapSignIn(_ sender: UIButton) {
+        setupAuthVC()
+        self.present(self.authVC, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAuthVC()
+        
+    
+    }
+    
+    func setupAuthVC() {
         let authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         let providers: [FUIAuthProvider] = [
@@ -27,8 +37,6 @@ class ViewController: UIViewController {
         if let vc = vc {
             self.authVC = vc
         }
-        
-    
     }
 
     override func viewDidAppear(_ animated: Bool) {
