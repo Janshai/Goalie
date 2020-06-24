@@ -13,6 +13,16 @@ class SettingsBaseTableViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Settings"
+        
+        self.form +++ LabelRow() { row in
+            row.title = "Profile"
+        }
+        
+        self.form +++ ButtonRow() { row in
+            row.title = "Log Out"
+        }
 
         // Do any additional setup after loading the view.
     }
