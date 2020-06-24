@@ -37,7 +37,8 @@ class SettingsBaseTableViewController: FormViewController {
                         alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
                         self.present(alert, animated: true, completion: nil)
                     } else {
-                        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+                        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? ViewController {
+                            vc.launchPopUpOnAppear = false
                             guard let window = self.view.window else {
                                 return
                             }

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var authVC: UIViewController!
+    var launchPopUpOnAppear = true
     
     @IBAction func tapSignIn(_ sender: UIButton) {
         setupAuthVC()
@@ -30,7 +31,10 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        self.present(self.authVC, animated: true, completion: nil)
+        if launchPopUpOnAppear {
+            self.present(self.authVC, animated: true, completion: nil)
+        }
+        
     }
 
 
