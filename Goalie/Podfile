@@ -12,7 +12,7 @@ target 'Goalie' do
   pod 'FirebaseUI/Facebook'
   pod 'FirebaseUI/Phone'
   pod 'FirebaseUI/OAuth'
-
+  pod 'Eureka'
   # Pods for Goalie
 
   target 'GoalieTests' do
