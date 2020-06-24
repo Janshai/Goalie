@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 struct AuthManager {
     static let defaultAuthViewModel: AuthViewModel = FirebaseAuthViewModel()
+    
+    static let defaultAuthProvider: AuthProvider = Auth.auth()
+    
+    
     
 }
