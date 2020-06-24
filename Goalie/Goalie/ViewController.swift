@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var authVC: UIViewController!
     var launchPopUpOnAppear = true
+    let applicationViewModel = ApplicationViewModel()
     
     @IBAction func tapSignIn(_ sender: UIButton) {
         setupAuthVC()
@@ -48,16 +49,11 @@ extension ViewController: AuthViewModelDelegate {
                 guard let window = self.view.window else {
                     return
                 }
-                window.rootViewController = vc
-                let options: UIView.AnimationOptions = .transitionCrossDissolve
-                let duration: TimeInterval = 0.3
-                
-                UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
+                applicationViewModel.setRootVC(toVC: vc, forWindow: window)
             }
         case .failure(let e):
             print(e.localizedDescription)
-            let alert = UIAlertController(title: "Error", message: "Oops, there was an error while signing you in. Please try again.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: nil))
+            let alert = applicationViewModel.generateErrorAlert(error: e)
             self.present(alert, animated: true, completion: nil)
         }
     }

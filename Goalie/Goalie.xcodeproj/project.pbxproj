@@ -25,6 +25,7 @@
 		04B5190B24A36B3800158107 /* SettingsBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190A24A36B3800158107 /* SettingsBaseTableViewController.swift */; };
 		04B5190D24A3791900158107 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190C24A3791900158107 /* AuthProvider.swift */; };
 		04B5190F24A37A2B00158107 /* FirebaseAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190E24A37A2B00158107 /* FirebaseAuthProvider.swift */; };
+		04B5191124A3838800158107 /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5191024A3838800158107 /* ApplicationViewModel.swift */; };
 		348B0F755ABF3E7F78C6D22E /* Pods_Goalie_GoalieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67779B85A97F14BD2076E3C /* Pods_Goalie_GoalieUITests.framework */; };
 		B5C719E115D6A60E00C859F1 /* Pods_Goalie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DC6EC3115BEE07FE1F7F5A /* Pods_Goalie.framework */; };
 		CFF4767EF3115A2B216926F8 /* Pods_GoalieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6BB405668E5713CE4627D8 /* Pods_GoalieTests.framework */; };
@@ -70,6 +71,7 @@
 		04B5190A24A36B3800158107 /* SettingsBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBaseTableViewController.swift; sourceTree = "<group>"; };
 		04B5190C24A3791900158107 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		04B5190E24A37A2B00158107 /* FirebaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthProvider.swift; sourceTree = "<group>"; };
+		04B5191024A3838800158107 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
 		08F4356ECC9FDEE9331B43E5 /* Pods-Goalie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goalie.debug.xcconfig"; path = "Target Support Files/Pods-Goalie/Pods-Goalie.debug.xcconfig"; sourceTree = "<group>"; };
 		0E246DDBEA3654FBC4C10D0C /* Pods-Goalie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goalie.release.xcconfig"; path = "Target Support Files/Pods-Goalie/Pods-Goalie.release.xcconfig"; sourceTree = "<group>"; };
 		1C1005166AE7C668CE8E6E64 /* Pods-GoalieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalieTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalieTests/Pods-GoalieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				0462264C24A0140C00448389 /* Info.plist */,
 				0462267624A235C100448389 /* Home.storyboard */,
 				04B5190A24A36B3800158107 /* SettingsBaseTableViewController.swift */,
+				04B5191024A3838800158107 /* ApplicationViewModel.swift */,
 			);
 			path = Goalie;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */,
 				04B5190B24A36B3800158107 /* SettingsBaseTableViewController.swift in Sources */,
 				04B5190D24A3791900158107 /* AuthProvider.swift in Sources */,
+				04B5191124A3838800158107 /* ApplicationViewModel.swift in Sources */,
 				0462264324A0140B00448389 /* ViewController.swift in Sources */,
 				0462263F24A0140B00448389 /* AppDelegate.swift in Sources */,
 				0462264124A0140B00448389 /* SceneDelegate.swift in Sources */,
