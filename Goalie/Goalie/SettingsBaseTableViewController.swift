@@ -24,7 +24,13 @@ class SettingsBaseTableViewController: FormViewController {
             row.title = "Log Out"
             row.onCellSelection() { cell, row in
                 let auth = AuthManager.defaultAuthProvider
+                let indicator = UIActivityIndicatorView()
+                indicator.hidesWhenStopped = true
+                indicator.style = .medium
+                cell.backgroundView = indicator
+                indicator.startAnimating()
                 auth.logOut() { error in
+                    indicator.stopAnimating()
                     if let e = error {
                         print(e.localizedDescription)
                         let alert = UIAlertController(title: "Error", message: "Oops, there was an error while signing you out. Please try again.", preferredStyle: UIAlertController.Style.alert)
