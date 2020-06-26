@@ -19,6 +19,11 @@
 		0462267424A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
 		0462267524A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
 		0462267724A235C100448389 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0462267624A235C100448389 /* Home.storyboard */; };
+		0493141624A4D04000C16176 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141524A4D04000C16176 /* Goal.swift */; };
+		0493141824A4D56B00C16176 /* GoalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141724A4D56B00C16176 /* GoalValue.swift */; };
+		0493141A24A4DD5100C16176 /* SmokingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141924A4DD5100C16176 /* SmokingGoal.swift */; };
+		0493141C24A4E83C00C16176 /* GoalsTabCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */; };
+		0493142024A5280A00C16176 /* GoalsTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */; };
 		04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190324A23FE500158107 /* AuthViewModel.swift */; };
 		04B5190624A2410B00158107 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190524A2410B00158107 /* AuthManager.swift */; };
 		04B5190824A2416300158107 /* FirebaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */; };
@@ -61,6 +66,11 @@
 		0462266224A0140D00448389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0462267224A0177900448389 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0462267624A235C100448389 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0493141524A4D04000C16176 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		0493141724A4D56B00C16176 /* GoalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalValue.swift; sourceTree = "<group>"; };
+		0493141924A4DD5100C16176 /* SmokingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingGoal.swift; sourceTree = "<group>"; };
+		0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTabCollectionViewController.swift; sourceTree = "<group>"; };
+		0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsTableCollectionViewCell.swift; sourceTree = "<group>"; };
 		04B5190324A23FE500158107 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		04B5190524A2410B00158107 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewModel.swift; sourceTree = "<group>"; };
@@ -138,6 +148,13 @@
 				0462264924A0140C00448389 /* LaunchScreen.storyboard */,
 				0462264C24A0140C00448389 /* Info.plist */,
 				0462267624A235C100448389 /* Home.storyboard */,
+				04B5190A24A36B3800158107 /* SettingsBaseTableViewController.swift */,
+				04B5191024A3838800158107 /* ApplicationViewModel.swift */,
+				0493141524A4D04000C16176 /* Goal.swift */,
+				0493141724A4D56B00C16176 /* GoalValue.swift */,
+				0493141924A4DD5100C16176 /* SmokingGoal.swift */,
+				0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */,
+				0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */,
 			);
 			path = Goalie;
 			sourceTree = "<group>";
@@ -473,8 +490,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */,
+				04B5190B24A36B3800158107 /* SettingsBaseTableViewController.swift in Sources */,
+				04B5190D24A3791900158107 /* AuthProvider.swift in Sources */,
+				04B5191124A3838800158107 /* ApplicationViewModel.swift in Sources */,
+				0493141A24A4DD5100C16176 /* SmokingGoal.swift in Sources */,
+				0493142024A5280A00C16176 /* GoalsTableCollectionViewCell.swift in Sources */,
 				0462264324A0140B00448389 /* ViewController.swift in Sources */,
 				0462263F24A0140B00448389 /* AppDelegate.swift in Sources */,
+				0493141824A4D56B00C16176 /* GoalValue.swift in Sources */,
+				0493141624A4D04000C16176 /* Goal.swift in Sources */,
+				0493141C24A4E83C00C16176 /* GoalsTabCollectionViewController.swift in Sources */,
 				0462264124A0140B00448389 /* SceneDelegate.swift in Sources */,
 				04B5190624A2410B00158107 /* AuthManager.swift in Sources */,
 				04B5190824A2416300158107 /* FirebaseAuthViewModel.swift in Sources */,
