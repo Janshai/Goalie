@@ -11,14 +11,24 @@ import Eureka
 
 class NewGoalViewController: FormViewController {
     
+    var goalViewModel: GoalViewModel!
+    var goalType = GoalType.smoking
+    
     private var baseForm: Form {
         get {
             let form = Form()
             form +++ Section("Goal Type")
                 <<< PushRow<String>("type") { row in
-                    row.value = GoalType.smoking.rawValue
+                    row.value = goalType.rawValue
                     row.options = GoalType.allCases.map({$0.rawValue})
                     row.selectorTitle = "Select a Goal Type"
+                }.onChange() { row in
+                    if let v = row.value, let type = GoalType(rawValue: v) {
+                        self.goalType = type
+                        self.goalViewModel = self.goalViewModel(forType: type)
+                        self.updateFormForNewType()
+                    }
+                    
             }
             return form
         }
@@ -29,6 +39,14 @@ class NewGoalViewController: FormViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Add Goal"
+        
+        self.form = baseForm
+        
+        if let row = form.rowBy(tag: "type") as? PushRow<String>, let value = row.value, let type = GoalType(rawValue: value) {
+            
+            self.goalViewModel = goalViewModel(forType: type)
+            
+        }
         
         updateFormForNewType()
 
@@ -41,15 +59,15 @@ class NewGoalViewController: FormViewController {
         case .smoking: return SmokingGoalViewModel()
         case .time: return SmokingGoalViewModel()
         case .writing: return SmokingGoalViewModel()
-        case .distance: return SmokingGoalViewModel()
+        case .distance: return DistanceGoalViewModel()
         }
     }
     
     func updateFormForNewType() {
         
-        let newForm = baseForm
+        var newForm = baseForm
         
-        //vm
+        newForm = goalViewModel.addCreationSections(toForm: newForm)
         
         newForm +++ ButtonRow() { row in
             row.title = "Save"
@@ -60,6 +78,7 @@ class NewGoalViewController: FormViewController {
         UIView.transition(with: tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
         
     }
+    
 
     /*
     // MARK: - Navigation

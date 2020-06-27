@@ -1,5 +1,5 @@
 //
-//  SmokingGoalViewModel.swift
+//  DistanceGoalViewModel.swift
 //  Goalie
 //
 //  Created by Jack Adams on 27/06/2020.
@@ -9,17 +9,15 @@
 import Foundation
 import Eureka
 
-struct SmokingGoalViewModel: GoalViewModel {
+struct DistanceGoalViewModel: GoalViewModel {
     func addCreationSections(toForm form: Form) -> Form {
         form +++ Section()
              <<< LabelRow() { row in
-                 row.title = "Smoking stuff"
+                 row.title = "distance stuff"
         }
         
         return form
     }
-    
-   
     
     
 }
