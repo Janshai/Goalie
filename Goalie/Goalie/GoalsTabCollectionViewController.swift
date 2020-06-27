@@ -11,6 +11,8 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class GoalsTabCollectionViewController: UICollectionViewController {
+    
+    var tabButtons: [UIButton] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +21,12 @@ class GoalsTabCollectionViewController: UICollectionViewController {
         layoutCells()
         self.collectionView!.dataSource = self
         self.collectionView!.delegate = self
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(tapAddButton(_:)))
 
         // Do any additional setup after loading the view.
     }
+    
     
     func layoutCells() {
         let layout = UICollectionViewFlowLayout()
@@ -31,6 +36,16 @@ class GoalsTabCollectionViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: collectionView.bounds.size.width, height: ((UIScreen.main.bounds.size.height - 40)/6))
         collectionView!.collectionViewLayout = layout
     }
+    
+    @objc func tapAddButton(_ sender: UIBarButtonItem) {
+        
+        self.navigationController?.pushViewController(NewGoalViewController(), animated: true)
+        
+    }
+
+    
+    
+    
 
 }
 
@@ -102,3 +117,4 @@ extension GoalsTabCollectionViewController {
     */
 
 }
+

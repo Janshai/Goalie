@@ -24,6 +24,10 @@
 		0493141A24A4DD5100C16176 /* SmokingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141924A4DD5100C16176 /* SmokingGoal.swift */; };
 		0493141C24A4E83C00C16176 /* GoalsTabCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */; };
 		0493142024A5280A00C16176 /* GoalsTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */; };
+		049A9F9224A77FFF001E4BD4 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9124A77FFF001E4BD4 /* NewGoalViewController.swift */; };
+		049A9F9424A7836D001E4BD4 /* GoalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9324A7836D001E4BD4 /* GoalTypes.swift */; };
+		049A9F9624A78415001E4BD4 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9524A78415001E4BD4 /* GoalViewModel.swift */; };
+		049A9F9824A78570001E4BD4 /* SmokingGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9724A78570001E4BD4 /* SmokingGoalViewModel.swift */; };
 		04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190324A23FE500158107 /* AuthViewModel.swift */; };
 		04B5190624A2410B00158107 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190524A2410B00158107 /* AuthManager.swift */; };
 		04B5190824A2416300158107 /* FirebaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */; };
@@ -75,6 +79,10 @@
 		0493141924A4DD5100C16176 /* SmokingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingGoal.swift; sourceTree = "<group>"; };
 		0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTabCollectionViewController.swift; sourceTree = "<group>"; };
 		0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsTableCollectionViewCell.swift; sourceTree = "<group>"; };
+		049A9F9124A77FFF001E4BD4 /* NewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
+		049A9F9324A7836D001E4BD4 /* GoalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTypes.swift; sourceTree = "<group>"; };
+		049A9F9524A78415001E4BD4 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
+		049A9F9724A78570001E4BD4 /* SmokingGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingGoalViewModel.swift; sourceTree = "<group>"; };
 		04B5190324A23FE500158107 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		04B5190524A2410B00158107 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewModel.swift; sourceTree = "<group>"; };
@@ -163,6 +171,10 @@
 				0493141924A4DD5100C16176 /* SmokingGoal.swift */,
 				0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */,
 				0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */,
+				049A9F9124A77FFF001E4BD4 /* NewGoalViewController.swift */,
+				049A9F9324A7836D001E4BD4 /* GoalTypes.swift */,
+				049A9F9524A78415001E4BD4 /* GoalViewModel.swift */,
+				049A9F9724A78570001E4BD4 /* SmokingGoalViewModel.swift */,
 			);
 			path = Goalie;
 			sourceTree = "<group>";
@@ -501,6 +513,9 @@
 			files = (
 				04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */,
 				04B5190B24A36B3800158107 /* SettingsBaseTableViewController.swift in Sources */,
+				049A9F9424A7836D001E4BD4 /* GoalTypes.swift in Sources */,
+				049A9F9824A78570001E4BD4 /* SmokingGoalViewModel.swift in Sources */,
+				049A9F9224A77FFF001E4BD4 /* NewGoalViewController.swift in Sources */,
 				04B5190D24A3791900158107 /* AuthProvider.swift in Sources */,
 				04B5191124A3838800158107 /* ApplicationViewModel.swift in Sources */,
 				0493141A24A4DD5100C16176 /* SmokingGoal.swift in Sources */,
@@ -508,6 +523,7 @@
 				0462264324A0140B00448389 /* ViewController.swift in Sources */,
 				0462263F24A0140B00448389 /* AppDelegate.swift in Sources */,
 				0493141824A4D56B00C16176 /* GoalValue.swift in Sources */,
+				049A9F9624A78415001E4BD4 /* GoalViewModel.swift in Sources */,
 				0493141624A4D04000C16176 /* Goal.swift in Sources */,
 				0493141C24A4E83C00C16176 /* GoalsTabCollectionViewController.swift in Sources */,
 				0462264124A0140B00448389 /* SceneDelegate.swift in Sources */,
