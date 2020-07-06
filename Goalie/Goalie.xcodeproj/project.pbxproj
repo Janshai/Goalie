@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0422585324B211AA00A6555B /* Weights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422585224B211AA00A6555B /* Weights.swift */; };
+		0422585624B2122000A6555B /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422585524B2122000A6555B /* Time.swift */; };
 		0462263F24A0140B00448389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462263E24A0140B00448389 /* AppDelegate.swift */; };
 		0462264124A0140B00448389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462264024A0140B00448389 /* SceneDelegate.swift */; };
 		0462264324A0140B00448389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462264224A0140B00448389 /* ViewController.swift */; };
@@ -19,6 +21,16 @@
 		0462267424A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
 		0462267524A0177900448389 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0462267224A0177900448389 /* GoogleService-Info.plist */; };
 		0462267724A235C100448389 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0462267624A235C100448389 /* Home.storyboard */; };
+		0493141624A4D04000C16176 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141524A4D04000C16176 /* Goal.swift */; };
+		0493141824A4D56B00C16176 /* GoalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141724A4D56B00C16176 /* GoalValue.swift */; };
+		0493141A24A4DD5100C16176 /* SmokingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141924A4DD5100C16176 /* SmokingGoal.swift */; };
+		0493141C24A4E83C00C16176 /* GoalsTabCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */; };
+		0493142024A5280A00C16176 /* GoalsTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */; };
+		049A9F9224A77FFF001E4BD4 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9124A77FFF001E4BD4 /* NewGoalViewController.swift */; };
+		049A9F9424A7836D001E4BD4 /* GoalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9324A7836D001E4BD4 /* GoalTypes.swift */; };
+		049A9F9624A78415001E4BD4 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9524A78415001E4BD4 /* GoalViewModel.swift */; };
+		049A9F9824A78570001E4BD4 /* SmokingGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9724A78570001E4BD4 /* SmokingGoalViewModel.swift */; };
+		049A9F9C24A791FD001E4BD4 /* DistanceGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A9F9B24A791FD001E4BD4 /* DistanceGoalViewModel.swift */; };
 		04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190324A23FE500158107 /* AuthViewModel.swift */; };
 		04B5190624A2410B00158107 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190524A2410B00158107 /* AuthManager.swift */; };
 		04B5190824A2416300158107 /* FirebaseAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */; };
@@ -49,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0422585224B211AA00A6555B /* Weights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weights.swift; sourceTree = "<group>"; };
+		0422585524B2122000A6555B /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		0462263B24A0140B00448389 /* Goalie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goalie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0462263E24A0140B00448389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0462264024A0140B00448389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +79,16 @@
 		0462266224A0140D00448389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0462267224A0177900448389 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0462267624A235C100448389 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0493141524A4D04000C16176 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		0493141724A4D56B00C16176 /* GoalValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalValue.swift; sourceTree = "<group>"; };
+		0493141924A4DD5100C16176 /* SmokingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingGoal.swift; sourceTree = "<group>"; };
+		0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTabCollectionViewController.swift; sourceTree = "<group>"; };
+		0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsTableCollectionViewCell.swift; sourceTree = "<group>"; };
+		049A9F9124A77FFF001E4BD4 /* NewGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
+		049A9F9324A7836D001E4BD4 /* GoalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTypes.swift; sourceTree = "<group>"; };
+		049A9F9524A78415001E4BD4 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
+		049A9F9724A78570001E4BD4 /* SmokingGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingGoalViewModel.swift; sourceTree = "<group>"; };
+		049A9F9B24A791FD001E4BD4 /* DistanceGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceGoalViewModel.swift; sourceTree = "<group>"; };
 		04B5190324A23FE500158107 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		04B5190524A2410B00158107 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		04B5190724A2416300158107 /* FirebaseAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthViewModel.swift; sourceTree = "<group>"; };
@@ -111,6 +135,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0422585124B2119100A6555B /* UnitsOfMeasurement */ = {
+			isa = PBXGroup;
+			children = (
+				0422585224B211AA00A6555B /* Weights.swift */,
+			);
+			path = UnitsOfMeasurement;
+			sourceTree = "<group>";
+		};
+		0422585424B211F200A6555B /* RatesOfMeasurement */ = {
+			isa = PBXGroup;
+			children = (
+				0422585524B2122000A6555B /* Time.swift */,
+			);
+			path = RatesOfMeasurement;
+			sourceTree = "<group>";
+		};
 		0462263224A0140B00448389 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +176,8 @@
 		0462263D24A0140B00448389 /* Goalie */ = {
 			isa = PBXGroup;
 			children = (
+				048E10C624B205ED00F63CFB /* GoalTypes */,
+				048E10C524B205C500F63CFB /* Goal */,
 				04B5190924A2463700158107 /* Auth */,
 				0462267224A0177900448389 /* GoogleService-Info.plist */,
 				0462263E24A0140B00448389 /* AppDelegate.swift */,
@@ -148,6 +190,9 @@
 				0462267624A235C100448389 /* Home.storyboard */,
 				04B5190A24A36B3800158107 /* SettingsBaseTableViewController.swift */,
 				04B5191024A3838800158107 /* ApplicationViewModel.swift */,
+				0493141B24A4E83C00C16176 /* GoalsTabCollectionViewController.swift */,
+				0493141F24A5280A00C16176 /* GoalsTableCollectionViewCell.swift */,
+				049A9F9124A77FFF001E4BD4 /* NewGoalViewController.swift */,
 			);
 			path = Goalie;
 			sourceTree = "<group>";
@@ -168,6 +213,45 @@
 				0462266224A0140D00448389 /* Info.plist */,
 			);
 			path = GoalieUITests;
+			sourceTree = "<group>";
+		};
+		048E10C524B205C500F63CFB /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				049A9F9524A78415001E4BD4 /* GoalViewModel.swift */,
+				049A9F9324A7836D001E4BD4 /* GoalTypes.swift */,
+				0493141724A4D56B00C16176 /* GoalValue.swift */,
+				0493141524A4D04000C16176 /* Goal.swift */,
+			);
+			path = Goal;
+			sourceTree = "<group>";
+		};
+		048E10C624B205ED00F63CFB /* GoalTypes */ = {
+			isa = PBXGroup;
+			children = (
+				0422585424B211F200A6555B /* RatesOfMeasurement */,
+				0422585124B2119100A6555B /* UnitsOfMeasurement */,
+				048E10C824B2060100F63CFB /* Goal */,
+				048E10C724B205F800F63CFB /* ViewModels */,
+			);
+			path = GoalTypes;
+			sourceTree = "<group>";
+		};
+		048E10C724B205F800F63CFB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				049A9F9B24A791FD001E4BD4 /* DistanceGoalViewModel.swift */,
+				049A9F9724A78570001E4BD4 /* SmokingGoalViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		048E10C824B2060100F63CFB /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				0493141924A4DD5100C16176 /* SmokingGoal.swift */,
+			);
+			path = Goal;
 			sourceTree = "<group>";
 		};
 		04B5190924A2463700158107 /* Auth */ = {
@@ -486,10 +570,22 @@
 			files = (
 				04B5190424A23FE500158107 /* AuthViewModel.swift in Sources */,
 				04B5190B24A36B3800158107 /* SettingsBaseTableViewController.swift in Sources */,
+				0422585624B2122000A6555B /* Time.swift in Sources */,
+				049A9F9424A7836D001E4BD4 /* GoalTypes.swift in Sources */,
+				049A9F9824A78570001E4BD4 /* SmokingGoalViewModel.swift in Sources */,
+				049A9F9224A77FFF001E4BD4 /* NewGoalViewController.swift in Sources */,
 				04B5190D24A3791900158107 /* AuthProvider.swift in Sources */,
 				04B5191124A3838800158107 /* ApplicationViewModel.swift in Sources */,
+				0493141A24A4DD5100C16176 /* SmokingGoal.swift in Sources */,
+				049A9F9C24A791FD001E4BD4 /* DistanceGoalViewModel.swift in Sources */,
+				0493142024A5280A00C16176 /* GoalsTableCollectionViewCell.swift in Sources */,
 				0462264324A0140B00448389 /* ViewController.swift in Sources */,
 				0462263F24A0140B00448389 /* AppDelegate.swift in Sources */,
+				0493141824A4D56B00C16176 /* GoalValue.swift in Sources */,
+				049A9F9624A78415001E4BD4 /* GoalViewModel.swift in Sources */,
+				0493141624A4D04000C16176 /* Goal.swift in Sources */,
+				0493141C24A4E83C00C16176 /* GoalsTabCollectionViewController.swift in Sources */,
+				0422585324B211AA00A6555B /* Weights.swift in Sources */,
 				0462264124A0140B00448389 /* SceneDelegate.swift in Sources */,
 				04B5190624A2410B00158107 /* AuthManager.swift in Sources */,
 				04B5190F24A37A2B00158107 /* FirebaseAuthProvider.swift in Sources */,
