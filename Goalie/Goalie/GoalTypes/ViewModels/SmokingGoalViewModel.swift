@@ -20,8 +20,8 @@ public struct SmokingGoalViewModel: GoalViewModel {
     
     public func addCreationSections(toForm form: Form) -> Form {
         form +++ Section()
-             <<< LabelRow() { row in
-                 row.title = "Smoking stuff"
+            <<< NameRow("name") { row in
+                row.placeholder = "Name"
         }
         
         return form

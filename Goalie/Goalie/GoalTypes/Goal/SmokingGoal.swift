@@ -10,6 +10,10 @@ import Foundation
 
 public class SmokingGoal: Goal {
     
+    
+    public var deadline: Deadline = Deadline(date: Date(), op: .by)
+    
+    
     public var progress: Double {
         get {
             return 0
@@ -22,7 +26,7 @@ public class SmokingGoal: Goal {
     
     public var status: String
     
-    private(set) var progressUpdates = [Date : GoalValue]()
+    private(set) var progressUpdates = [Date : SmokingValue]()
     
     init(name: String, status: String, target: SmokingValue, start: SmokingValue? = nil) {
         self.name = name
@@ -30,7 +34,7 @@ public class SmokingGoal: Goal {
         self.status = status
     }
     
-    public func new(value: GoalValue) {
+    public func new(value: SmokingValue) {
         self.progressUpdates[Date()] = value
     }
     
