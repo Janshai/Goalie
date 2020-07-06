@@ -17,9 +17,27 @@ public protocol Goal {
     
     var target: GoalValue { get set }
     
-    //progress updates
+    var deadline: Deadline { get }
     
+    //progress updates
+    func new(value: GoalValue)
+    
+    
+
     // completed
     
     //category
+    
+    
+}
+
+public struct Deadline {
+    var date: Date
+    var op: DeadlineOperator
+
+}
+
+public enum DeadlineOperator {
+    case by
+    case until
 }

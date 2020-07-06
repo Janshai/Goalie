@@ -22,7 +22,7 @@ public class SmokingGoal: Goal {
     
     public var status: String
     
-    private(set) var progressUpdates = [Date : SmokingValue]()
+    private(set) var progressUpdates = [Date : GoalValue]()
     
     init(name: String, status: String, target: SmokingValue, start: SmokingValue? = nil) {
         self.name = name
@@ -30,7 +30,7 @@ public class SmokingGoal: Goal {
         self.status = status
     }
     
-    public func new(value: SmokingValue) {
+    public func new(value: GoalValue) {
         self.progressUpdates[Date()] = value
     }
     
