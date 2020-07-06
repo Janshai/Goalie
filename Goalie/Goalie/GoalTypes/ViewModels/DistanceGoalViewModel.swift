@@ -10,6 +10,14 @@ import Foundation
 import Eureka
 
 public struct DistanceGoalViewModel: GoalViewModel {
+    public func addToDataStore(onCompletion completion: @escaping (Error?) -> Void) {
+        completion(nil)
+    }
+    
+    public var ratesOfMeasurement: [RateOfMeasurement] = []
+    
+    public var unitsOfMeasurement: [UnitOfMeasurement] = []
+    
     public var name: String
     
     public var target: String

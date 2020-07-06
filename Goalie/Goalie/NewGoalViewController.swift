@@ -18,14 +18,20 @@ class NewGoalViewController: FormViewController {
         get {
             let form = Form()
             form +++ Section("Goal Type")
-                <<< PushRow<String>("type") { row in
-                    row.value = goalType.rawValue
-                    row.options = GoalType.allCases.map({$0.rawValue})
+                <<< PushRow<GoalType>("type") { row in
+                    row.value = goalType
+                    row.options = GoalType.allCases
+                    row.displayValueFor = { value in
+                        switch value {
+                        case .some(let type): return type.rawValue.capitalized
+                        default: return "Error"
+                        }
+                    }
                     row.selectorTitle = "Select a Goal Type"
                 }.onChange() { row in
-                    if let v = row.value, let type = GoalType(rawValue: v) {
-                        self.goalType = type
-                        self.goalViewModel = self.goalViewModel(forType: type)
+                    if let v = row.value {
+                        self.goalType = v
+                        self.goalViewModel = self.goalViewModel(forType: v)
                         self.updateFormForNewType()
                     }
                     
@@ -42,12 +48,11 @@ class NewGoalViewController: FormViewController {
         
         self.form = baseForm
         
-        if let row = form.rowBy(tag: "type") as? PushRow<String>, let value = row.value, let type = GoalType(rawValue: value) {
-            
-            self.goalViewModel = goalViewModel(forType: type)
-            
+        if let row = form.rowBy(tag: "type") as? PushRow<GoalType> {
+            if let value = row.value {
+                self.goalViewModel = goalViewModel(forType: value)
+            }
         }
-        
         updateFormForNewType()
 
         // Do any additional setup after loading the view.
@@ -71,11 +76,36 @@ class NewGoalViewController: FormViewController {
         
         newForm +++ ButtonRow() { row in
             row.title = "Save"
+            row.onCellSelection { cell, row in
+                //validate
+                self.updateViewModel()
+                let indicator = UIActivityIndicatorView()
+                indicator.hidesWhenStopped = true
+                indicator.style = .medium
+                cell.backgroundView = indicator
+                indicator.startAnimating()
+                self.tableView.isUserInteractionEnabled = false
+                self.goalViewModel.addToDataStore { [weak self] error in
+                    indicator.stopAnimating()
+                    self?.tableView.isUserInteractionEnabled = true
+                    guard let _ = error else {
+                        self?.navigationController?.popViewController(animated: true)
+                        return
+                    }
+                    //error
+                    return
+                }
+                
+            }
         }
         
         self.form = newForm
         
         UIView.transition(with: tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
+        
+    }
+    
+    func updateViewModel() {
         
     }
     

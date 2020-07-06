@@ -47,6 +47,10 @@ public class SmokingValue: GoalValue {
     
     public var rate: RateOfMeasurement?
     
+    public static var unitsOfMeasurement: [UnitOfMeasurement] = [Grams()]
+    
+    public static var ratesOfMeasurement: [RateOfMeasurement] = [PerDay()]
+    
     private var internalValue: Double
     
     init(value: Double, unit: UnitOfMeasurement? = nil, rate: RateOfMeasurement? = nil) {

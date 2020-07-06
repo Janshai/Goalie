@@ -23,6 +23,8 @@ public protocol Goal {
     func new(value: GoalValue)
     
     
+    
+    
 
     // completed
     
@@ -37,7 +39,7 @@ public struct Deadline {
 
 }
 
-public enum DeadlineOperator {
+public enum DeadlineOperator: String, CaseIterable {
     case by
     case until
 }

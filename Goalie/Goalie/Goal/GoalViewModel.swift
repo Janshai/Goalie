@@ -17,4 +17,10 @@ public protocol GoalViewModel {
     
     func addCreationSections(toForm: Form) -> Form
     
+    var ratesOfMeasurement: [RateOfMeasurement] { get }
+    
+    var unitsOfMeasurement: [UnitOfMeasurement] { get }
+    
+    func addToDataStore(onCompletion: @escaping (Error?) -> Void)
+    
 }

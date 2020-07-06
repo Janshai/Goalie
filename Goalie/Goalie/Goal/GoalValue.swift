@@ -20,6 +20,10 @@ public protocol GoalValue {
     
     //rate
     var rate: RateOfMeasurement? { get set }
+    
+    static var unitsOfMeasurement: [UnitOfMeasurement] { get }
+
+    static var ratesOfMeasurement: [RateOfMeasurement] { get }
 }
 
 public protocol UnitOfMeasurement {
