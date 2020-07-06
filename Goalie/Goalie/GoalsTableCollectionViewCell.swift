@@ -10,6 +10,13 @@ import UIKit
 
 class GoalsTableCollectionViewCell: UICollectionViewCell {
     
+    var goal: GoalViewModel! {
+        didSet {
+            name.text = goal.name
+            target.text = goal.target
+        }
+    }
+    
     @IBOutlet weak var imageView: UIImageView!
     
     

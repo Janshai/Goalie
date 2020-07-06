@@ -7,12 +7,15 @@
 //
 
 import Foundation
-protocol Goal {
+public protocol Goal {
+    associatedtype GoalValue
     var progress: Double { get }
     
     var name: String { get set }
     
     var status: String { get set }
+    
+    var target: GoalValue { get set }
     
     //progress updates
     

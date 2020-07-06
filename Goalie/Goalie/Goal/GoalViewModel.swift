@@ -9,7 +9,12 @@
 import Foundation
 import Eureka
 
-protocol GoalViewModel {
+public protocol GoalViewModel {
+    
+    var name: String {get set}
+    
+    var target: String {get set}
+    
     func addCreationSections(toForm: Form) -> Form
     
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum GoalType: String, CaseIterable {
+public enum GoalType: String, CaseIterable {
     case smoking
     case time
     case distance

@@ -9,8 +9,12 @@
 import Foundation
 import Eureka
 
-struct DistanceGoalViewModel: GoalViewModel {
-    func addCreationSections(toForm form: Form) -> Form {
+public struct DistanceGoalViewModel: GoalViewModel {
+    public var name: String
+    
+    public var target: String
+    
+    public func addCreationSections(toForm form: Form) -> Form {
         form +++ Section()
              <<< LabelRow() { row in
                  row.title = "distance stuff"

@@ -56,10 +56,10 @@ class NewGoalViewController: FormViewController {
     
     func goalViewModel(forType type: GoalType) -> GoalViewModel {
         switch type {
-        case .smoking: return SmokingGoalViewModel()
-        case .time: return SmokingGoalViewModel()
-        case .writing: return SmokingGoalViewModel()
-        case .distance: return DistanceGoalViewModel()
+        case .smoking: return SmokingGoalViewModel(goal: SmokingGoal(name: "", status: "", target: SmokingValue(value: 0)))
+        case .time: return SmokingGoalViewModel(goal: SmokingGoal(name: "", status: "", target: SmokingValue(value: 0)))
+        case .writing: return SmokingGoalViewModel(goal: SmokingGoal(name: "", status: "", target: SmokingValue(value: 0)))
+        case .distance: return DistanceGoalViewModel(name: "", target: "")
         }
     }
     

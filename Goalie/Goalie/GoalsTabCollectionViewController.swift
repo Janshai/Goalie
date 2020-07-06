@@ -8,15 +8,20 @@
 
 import UIKit
 
+
 private let reuseIdentifier = "Cell"
 
 class GoalsTabCollectionViewController: UICollectionViewController {
     
-    var tabButtons: [UIButton] = []
+    var goals: [GoalViewModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let newGoal = SmokingGoalViewModel(goal: SmokingGoal(name: "Quit Smoking", status: "test", target: SmokingValue(value: 0, unit: Grams(), rate: PerDay())))
+        
+        goals.append(newGoal)
 
         layoutCells()
         self.collectionView!.dataSource = self
@@ -63,18 +68,18 @@ extension GoalsTabCollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return goals.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("here")
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? GoalsTableCollectionViewCell else {
             return UICollectionViewCell()
         }
         
+        let goal = goals[indexPath.row]
+        cell.goal = goal
         
-    
-        // Configure the cell
+        
     
         return cell
     }
